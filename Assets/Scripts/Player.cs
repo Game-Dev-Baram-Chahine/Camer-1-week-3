@@ -12,8 +12,6 @@ public class Player : MonoBehaviour
     private Vector3 topRightLimit;
     private Vector3 bottomLeftLimit;
     private Vector3 input;
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +20,6 @@ public class Player : MonoBehaviour
         topRightLimit = topRightLimitGameObject.transform.position;
 
     }
-
     // Update is called once per frame
     void Update()
     {
