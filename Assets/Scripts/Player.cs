@@ -29,21 +29,26 @@ public class Player : MonoBehaviour
     This method move the player based on user input,
     Also makes sire that the player doesn't pass the boundries.
     */
-    void MovePlayer(){
+    void MovePlayer()
+    {
         input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-        if((rigidBody.position.x <= bottomLeftLimit.x)){
+        if ((rigidBody.position.x <= bottomLeftLimit.x))
+        {
             input.x = 1;
-        } 
-        if((rigidBody.position.y <= bottomLeftLimit.y)){
+        }
+        if ((rigidBody.position.y <= bottomLeftLimit.y))
+        {
             input.y = 1;
-        } 
-         if((rigidBody.position.x >= topRightLimit.x)){
+        }
+        if ((rigidBody.position.x >= topRightLimit.x))
+        {
             input.x = -1;
-        } 
-        if((rigidBody.position.y >= topRightLimit.y)){
+        }
+        if ((rigidBody.position.y >= topRightLimit.y))
+        {
             input.y = -1;
-        } 
-        rigidBody.velocity = new Vector2(input.x*moveSpeed ,input.y*moveSpeed);
-          
+        }
+        rigidBody.velocity = new Vector2(input.x * moveSpeed, input.y * moveSpeed);
+
     }
 }
